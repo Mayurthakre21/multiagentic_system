@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent AI System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-Agentic System with Dynamic Decision Making</h1>
+        <hr>
+        <div class="pdf-upload-section">
+            <div class="system-message">
+                <h3>Welcome! Upload a PDF or ask a general question</h3>
+            </div>
+       </div>
+        <div class="chat-interface">
+            <div class="chat-history" id="chatHistory">
+                <div>Hey,</div>
+                <div>How can i help you ?</div>
+            </div>
+
+            <div class="query-input-area">
+                <input type="text" id="queryInput" placeholder="Enter your query here (e.g., latest space news, or question about the uploaded PDF...)" onkeydown="if(event.key === 'Enter') sendQuery()">
+                <button onclick="sendQuery()">Send</button>
+                <div class="upload-widget">
+                    <label for="pdfFile" class="custom-file-upload">
+                        <span id="fileNameDisplay">Click to Select PDF (Only .pdf)</span>
+                    </label>
+                    <input type="file" id="pdfFile" accept=".pdf" onchange="displayFileName()">
+                    <button onclick="uploadPdf()">Upload & Process PDF</button>
+                </div>
+                <p id="pdfStatus" class="status-message"></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="logs-link">
+            <p>Admin: Decision logs are saved to the backend. <a href="/logs" target="_blank">View Raw JSON Logs</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
