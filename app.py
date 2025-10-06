@@ -219,7 +219,6 @@ def get_logs():
         return jsonify({"message": f"Error reading logs: {e}"}), 500
 
 
-if __name__ == '__main__':
-    # Flask runs on port 5000 by default
-    app_logger.info("Starting Flask application...")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=7860)
