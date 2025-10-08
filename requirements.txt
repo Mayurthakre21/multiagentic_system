@@ -1,5 +1,6 @@
 arxiv==2.2.0
 Flask==3.1.2
+flask-cors
 langchain==0.3.27
 langchain_community==0.3.30
 langchain_core==0.3.78
@@ -9,4 +10,8 @@ pdfplumber==0.11.7
 python-dotenv==1.1.1
 torch==2.8.0
 transformers==4.57.0
-#pip install -U ddgs
+ddgs
+pypdf
+faiss-cpu
+datasets
+huggingface_hub
